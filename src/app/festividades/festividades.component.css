@@ -1,0 +1,31 @@
+.line-mf {
+  width: 45px;
+  height: 5px;
+  background-color: #ffc500;
+  margin: 0 auto;
+}
+.subtitulo {
+  padding-top: 2vw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+p.texto {
+  text-align: justify;
+}
+.title-fest {
+  color: #1d3973;
+}
+.fa {
+  color: #2758b9;
+}
+.lead {
+  font-size: 1.2vw;
+}
+.datos {
+  display: inline-flex;
+}
+p {
+  margin-right: 2vw;
+}

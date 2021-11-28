@@ -1,0 +1,9 @@
+.image-footer {
+  width: 12rem;
+}
+.border-top {
+  border-top: 1px solid #ffc500 !important;
+}
+footer {
+  background-color: rgb(252, 252, 252);
+}

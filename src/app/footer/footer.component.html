@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        let deferredPrompt;
+        window.addEventListener("beforeinstallprompt", function(e) {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+        btnAdd = document.getElementById("btnAdd");
+        btnAdd.addEventListener("click", (e) => {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === "acepted") {
+                    console.log("instalado");
+                    btnAdd.style.display = "none";
+                } else {
+                    console.log("no la ah instalado");
+                }
+                deferredPrompt = null;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <footer class="
+        d-flex
+        flex-wrap
+        justify-content-between
+        align-items-center
+        py-3
+        my-4
+        border-top
+      ">
+        <a href="/" class="col-md-4 mb-0 d-flex align-items-center">
+            <img class="image-footer" src="../assets/img/logo.png" alt="" />
+        </a>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">¿A donde ir?</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Festividades</a>
+            </li>
+            <li class="nav-item">
+                <a href="" id="btnAdd" class="nav-link px-2 text-muted">Descargar App</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

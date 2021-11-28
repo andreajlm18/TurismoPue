@@ -1,0 +1,13 @@
+<div class="container-fluid donde-ir">
+  <h2 class="subtitulo">Pueblos magicos</h2>
+  <div class="line-mf"></div>
+  <div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-md-4" *ngFor= "let lugar of lugar;">
+      <div class="card text-white bg-dark"  style="background-image: url({{lugar.image}});" >
+        <a class="title-card" [routerLink]="['/info']" href="" >{{lugar.nombre}}</a> 
+      </div>
+  </div>
+  </div>
+</div>
+</div>
