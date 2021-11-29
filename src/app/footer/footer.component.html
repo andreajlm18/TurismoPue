@@ -6,26 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-        let deferredPrompt;
-        window.addEventListener("beforeinstallprompt", function(e) {
-            e.preventDefault();
-            deferredPrompt = e;
-        });
-        btnAdd = document.getElementById("btnAdd");
-        btnAdd.addEventListener("click", (e) => {
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === "acepted") {
-                    console.log("instalado");
-                    btnAdd.style.display = "none";
-                } else {
-                    console.log("no la ah instalado");
-                }
-                deferredPrompt = null;
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -52,7 +32,7 @@
                 <a href="#" class="nav-link px-2 text-muted">Festividades</a>
             </li>
             <li class="nav-item">
-                <a href="" id="btnAdd" class="nav-link px-2 text-muted">Descargar App</a
+                <a href="#" (click)="open()" id="borrar" class="nav-link px-2 text-muted">Descargar App</a
           >
         </li>
       </ul>
